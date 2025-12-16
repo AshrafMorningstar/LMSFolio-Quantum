@@ -1,7 +1,7 @@
 {
   "name": "lmsfolio-quantum",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "🎓 LMSFolio Quantum - The Future of Learning. An AI-Native Learning Operating System.",
   "author": "Ashraf Morningstar <https://github.com/AshrafMorningstar>",
   "keywords": [
