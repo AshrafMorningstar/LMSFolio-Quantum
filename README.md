@@ -23,6 +23,29 @@
 
 ---
 
+## 🌌 Skill Nebula Architecture
+
+The system uses a **Force-Directed Graph** to visualize knowledge acquisition:
+
+```mermaid
+graph TD
+    Student((👨‍🎓 Student)) -->|Completes| Module[📘 React Core]
+    Module -->|Unlocks XP| Token[🪙 Quantum Token]
+
+    subgraph "🌌 Skill Galaxy"
+        Module -->|Expands| NodeA[⚛️ Hooks]
+        Module -->|Expands| NodeB[🔄 Context]
+        NodeA -->|Connects| NodeC[🎨 Tailwind]
+    end
+
+    subgraph "🧠 AI Cortex"
+        Student -->|Ask| Gemini[🤖 Gemini Ultra]
+        Gemini -->|Suggests| Path[🛣️ Custom Curve]
+    end
+```
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Core**: React 19, TypeScript
