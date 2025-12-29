@@ -15,7 +15,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: '/LMSFolio-Quantum/',
+      base: './', // Use relative path for maximum compatibility
       server: {
         port: 3000,
         host: '0.0.0.0',
