@@ -5,9 +5,9 @@
   "description": "🎓 LMSFolio Quantum - The Future of Learning. An AI-Native Learning Operating System.",
   "author": "Ashraf Morningstar <https://github.com/AshrafMorningstar>",
   "keywords": [
-    "react", 
-    "lms", 
-    "ai-education", 
+    "react",
+    "lms",
+    "ai-education",
     "gemini-api",
     "edtech-revolution",
     "future-learning",
@@ -19,22 +19,27 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
     "@google/genai": "^1.33.0",
-    "lucide-react": "^0.561.0",
-    "gsap": "3.12.5",
-    "chess.js": "1.0.0-beta.8",
     "@react-spring/web": "9.7.3",
     "@use-gesture/react": "10.3.0",
+    "chess.js": "1.0.0-beta.8",
+    "gsap": "3.12.5",
+    "lucide-react": "^0.561.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "zustand": "^5.0.9"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.23",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }

@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default Dark Mode (Quantum) */
+  --chronos-blue: #0A0C27;
+  --chronos-dark: #050510;
+  --chronos-space: #0F102E;
+  
+  --neuro-purple: #3A0CA3;
+  --neuro-pink: #FF00FF;
+  --neuro-cyan: #00F5FF;
+  
+  --quantum-glow: #4CC9F0;
+  --quantum-energy: #7209B7;
+  --quantum-matter: #F72585;
+  
+  --hologram-primary: rgba(10, 12, 39, 0.85);
+  --hologram-secondary: rgba(58, 12, 163, 0.8);
+  --hologram-accent: rgba(0, 245, 255, 0.6);
+}
+
+/* Light Mode Overrides */
+html:not(.dark) {
+  --chronos-blue: #F0F4F8;
+  --chronos-dark: #FFFFFF;
+  --chronos-space: #E2E8F0;
+
+  --neuro-purple: #4F46E5; 
+  --neuro-pink: #DB2777;
+  --neuro-cyan: #0891B2;
+
+  --quantum-glow: #0EA5E9;
+  --quantum-energy: #7C3AED;
+  --quantum-matter: #BE185D;
+
+  --hologram-primary: rgba(255, 255, 255, 0.85);
+  --hologram-secondary: rgba(79, 70, 229, 0.1);
+  --hologram-accent: rgba(14, 165, 233, 0.2);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--chronos-dark);
+  color: #fff;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  -webkit-font-smoothing: antialiased; /* Text rendering optimization */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html:not(.dark) body {
+  color: #1a202c;
+}
+
+.quantum-scroll::-webkit-scrollbar {
+  width: 8px;
+  background: var(--chronos-dark);
+}
+.quantum-scroll::-webkit-scrollbar-thumb {
+  background: var(--neuro-purple);
+  border-radius: 4px;
+}
+
+.glass-panel {
+  background: var(--hologram-primary);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Hardware acceleration for glass panels */
+  transform: translateZ(0);
+}
+
+html:not(.dark) .glass-panel {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Quantum Grid Background */
+.quantum-grid {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(58, 12, 163, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(58, 12, 163, 0.1) 1px, transparent 1px);
+}
+
+.hologram-text {
+   text-shadow: 0 0 10px var(--quantum-glow), 0 0 20px var(--quantum-glow);
+}
+
+/* Performance Optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Layer promotion for common animated elements if needed */
+.animate-layer {
+  will-change: transform, opacity;
+}
