@@ -11,9 +11,9 @@
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { GeminiModelType, ImageGenConfig } from "../types";
 
-// Ensure API key is available
-// Fix: Initialize GoogleGenAI with process.env.API_KEY directly as per guidelines
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Conditional AI initialization - only create if API key exists
+const API_KEY = process.env.API_KEY || process.env.VITE_GEMINI_API_KEY;
+const ai = API_KEY ? new GoogleGenAI({ apiKey: API_KEY }) : null;
 
 export const getGeminiResponse = async (
   prompt: string,
@@ -22,8 +22,8 @@ export const getGeminiResponse = async (
   genConfig?: ImageGenConfig
 ): Promise<{ text: string; sources?: any[]; generatedImage?: string }> => {
   
-  if (!process.env.API_KEY) {
-    return { text: "Error: No API Key provided in environment." };
+  if (!ai || !API_KEY) {
+    return { text: "⚠️ AI features require a Gemini API key. Please add VITE_GEMINI_API_KEY to your .env file." };
   }
 
   try {
